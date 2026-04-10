@@ -4,12 +4,22 @@
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**"
+      "**/node_modules/**",
+      "style.css",
+      "script.js"
     ],
     "rewrites": [
       {
         "source": "**",
         "destination": "/Gaudin_Eloann_LicencePsychologie.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "**/*.html",
+        "headers": [
+          { "key": "Cache-Control", "value": "no-cache" }
+        ]
       }
     ]
   }
